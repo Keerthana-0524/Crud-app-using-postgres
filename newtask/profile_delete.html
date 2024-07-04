@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Profile</title>
+    <style>
+        /* Embedded CSS styles */
+        /* Customize as needed */
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .btn {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+        <div>
+            <a class="navbar-brand" href="#">User Profile Home</a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{% url 'profile_list' %}">User Profiles</a>
+            <a class="nav-item nav-link" href="{% url 'profile_create' %}">Create Profile</a>
+            <a class="nav-item nav-link" href="{% url 'profile_detail' %}">Update Profile</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Are you sure you want to delete "{{ profile.first_name }} {{ profile.last_name }}"?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, delete</button>
+            <a href="{% url 'profile_list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+
+    <script>
+        // Embedded JavaScript scripts
+        // Customize as needed
+        document.addEventListener("DOMContentLoaded", function() {
+            // Your custom JavaScript code
+        });
+    </script>
+</body>
+</html>

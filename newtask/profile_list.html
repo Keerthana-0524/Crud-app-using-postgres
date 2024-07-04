@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* Embedded CSS styles */
+        /* Customize as needed */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .profile-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 400px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+        .profile-card h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .profile-card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn-create-profile {
+            background-color: #17a2b8; /* Pastel blue */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .btn-create-profile:hover {
+            background-color: #138496; /* Darker shade of pastel blue */
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h2>User Profile</h2>
+        <p>Welcome to your profile page. Manage your details and explore!</p>
+        <a href="{% url 'profile_create' %}" class="btn-create-profile">Create Profile</a>
+    </div>
+
+    <div class="footer">
+        Designed with ❤️ 
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script>
+        // Embedded JavaScript scripts
+        // Customize as needed
+        document.addEventListener("DOMContentLoaded", function() {
+            // Your custom JavaScript code
+        });
+    </script>
+</body>
+</html>
